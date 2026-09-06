@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+/* Phone-frame mockup on wide viewports; fills the real viewport on mobile,
+   where this app is actually used. */
+.saathi-outer {
+  width: 100%;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #E9E4D6;
+}
+.saathi-shell {
+  width: 100%;
+  height: 100dvh;
+  background: #FFFFFF;
+  overflow: hidden;
+  position: relative;
+}
+@media (min-width: 640px) {
+  .saathi-outer {
+    padding: 24px 0;
+  }
+  .saathi-shell {
+    width: 380px;
+    height: 720px;
+    border-radius: 40px;
+    box-shadow: 0 30px 60px -20px rgba(16, 32, 26, 0.35);
+    border: 8px solid #101826;
+  }
+}
